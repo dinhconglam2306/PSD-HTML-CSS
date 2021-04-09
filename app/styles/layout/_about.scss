@@ -1,0 +1,49 @@
+.about {
+  padding-top: 9.3rem;
+  padding-bottom: 9rem;
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+  }
+  &-image {
+    @include size(100%);
+    object-fit: cover;
+  }
+
+  &-content {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2rem;
+  }
+  &-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    @include textClamp(1);
+  }
+  @include maxWidth(767px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    &-list {
+      grid-auto-columns: 80%;
+      grid-auto-flow: column;
+      grid-template-columns: unset;
+      grid-gap: 2.5rem;
+      overflow-x: auto;
+      @include hideScroll();
+      padding: 1rem;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+    }
+    &-item {
+      scroll-snap-align: center;
+    }
+  }
+}
+@include hoverEffect(".about-item", ".about-content");

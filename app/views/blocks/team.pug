@@ -1,0 +1,25 @@
+section.team
+  .container
+    +blockBox({
+      caption:"Who we arr",
+      heading:"Meet our team",
+      desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quo nemo laborum qui at minima, amet, aliquid consequuntur asperiores, repellat omnis cum voluptatem nesciunt blanditiis error quidem iste magni dolor!"})
+    .team-list
+      +teamItem({
+        src:"../images/img-team1.png",
+        name:"Matthew Dix",
+        positon:"Graphic Design"})
+        +teamSocial("###")
+      +teamItem({
+        src:"../images/img-team2.png",
+        name:"Christopher Cambell",
+        positon:"Branding/UX Team"})
+        +teamSocial()
+      +teamItem({
+        src:"../images/img-team3.png",
+        name:"Michael fertig",
+        positon:"Developer"})
+        +teamSocial()
+section.brand
+  .container
+    img(src="../images/img-logos.png" alt="brands")
